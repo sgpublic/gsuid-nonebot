@@ -20,7 +20,7 @@ adapters = [
     { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
 ]
 plugins = []
-plugin_dirs = ["./core/gsuid_core"]
+plugin_dirs = ["./core/gsuid_core", "./plugins/zzzerouid"]
 builtin_plugins = []
 
 
