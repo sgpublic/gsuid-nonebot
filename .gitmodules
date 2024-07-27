@@ -1,0 +1,8 @@
+[submodule "gsuid_core"]
+	path = gsuid_core
+	url = git@github.com:Genshin-bots/gsuid_core.git
+	branch = master
+[submodule "zzzerouid"]
+	path = zzzerouid
+	url = git@github.com:ZZZure/ZZZeroUID.git
+	branch = master

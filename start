@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+cd ./gsuid_core
+
+poetry install
+
+poetry run core
