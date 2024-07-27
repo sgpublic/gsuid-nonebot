@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "zzzero"
+version = "0.1.0"
+description = ""
+authors = ["sgpublic <sgpublic2002@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+nonebot2 = {extras = ["fastapi"], version = "^2.3.2"}
+nonebot-adapter-onebot = "^2.4.4"
+
+nb-cli = "^1.4.1"
+
+gsuid-core = { path = "./core/gsuid_core" }
+zzzerouid = { path = "./plugins/zzzerouid" }
+
+[tool.nonebot]
+adapters = [
+    { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
+]
+plugins = []
+plugin_dirs = ["./core/gsuid_core"]
+builtin_plugins = []
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
