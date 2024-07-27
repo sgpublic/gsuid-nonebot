@@ -2,4 +2,4 @@
 
 poetry install
 
-poetry run nb run
+poetry run core

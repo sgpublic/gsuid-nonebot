@@ -1,0 +1,26 @@
+version: '3'
+services:
+  gsuid-core:
+    image: mhmzx/poetry-runner:bookworm-20240130
+    restart: unless-stopped
+    volumes:
+      - /mnt/core/app/nonebot-gsuid/app/gsuid_core:/app
+      - /mnt/core/app/nonebot-gsuid/data/gsuid-core/data:/app/data
+      - /mnt/core/app/nonebot-gsuid/data/gsuid-core/start:/start
+      - /mnt/core/app/nonebot-gsuid/data/gsuid-core/config.json:/app/gsuid_core/config.json
+      - /mnt/core/home/.ssh/docker:/home/poetry-runner/.ssh
+      - /mnt/core/var/tmp/nonebot-gsuid:/home/poetry-runner/.cache
+    ports:
+      - 8765:8765
+  nonebot:
+    image: mhmzx/poetry-runner:bookworm-20240130
+    restart: unless-stopped
+    volumes:
+      - /mnt/core/app/nonebot-gsuid/app/nonebot:/app
+      - /mnt/core/app/nonebot-gsuid/data/gsuid-nonebot/.env.prod:/app/.env.prod
+      - /mnt/core/home/.ssh/docker:/home/poetry-runner/.ssh
+      - /mnt/core/var/tmp/nonebot-gsuid:/home/poetry-runner/.cache
+    ports:
+      - 11224:11224
+    depends_on:
+      - gsuid-core

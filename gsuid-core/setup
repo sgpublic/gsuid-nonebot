@@ -1,5 +1,0 @@
-#!/bin/bash -e
-
-cd ./core/gsuid_core
-rm -f ./gsuid_core/plugins/zzzerouid
-ln -s ../../../../plugins/zzzerouid ./gsuid_core/plugins/zzzerouid
