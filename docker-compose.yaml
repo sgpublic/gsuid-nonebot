@@ -1,7 +1,7 @@
 version: '3'
 services:
   gsuid-core:
-    image: mhmzx/poetry-runner:bookworm-20240130
+    image: mhmzx/poetry-runner:3.11-bookworm
     restart: unless-stopped
     volumes:
       - /mnt/core/app/nonebot-gsuid/app/gsuid_core:/app
@@ -13,7 +13,7 @@ services:
     ports:
       - 8765:8765
   nonebot:
-    image: mhmzx/poetry-runner:bookworm-20240130
+    image: mhmzx/poetry-runner:3.11-bookworm
     restart: unless-stopped
     volumes:
       - /mnt/core/app/nonebot-gsuid/app/nonebot:/app
